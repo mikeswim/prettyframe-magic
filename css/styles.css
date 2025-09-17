@@ -1,0 +1,375 @@
+/* IOA Australia Styles */
+:root {
+    --primary-ocean: #0077be;
+    --secondary-ocean: #4da6d9;
+    --accent-wave: #66c3f2;
+    --deep-blue: #003d5c;
+    --foam-white: #f0f8ff;
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --shadow-ocean: 0 8px 32px rgba(0, 119, 190, 0.3);
+    --gradient-ocean: linear-gradient(135deg, #0077be, #4da6d9);
+    --gradient-wave: linear-gradient(90deg, #66c3f2, #0077be, #66c3f2);
+    --gradient-surface: linear-gradient(180deg, #001122, #003d5c);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--gradient-surface);
+    color: white;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Glass morphism effect */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow-ocean);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 119, 190, 0.4);
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: var(--shadow-ocean);
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: var(--gradient-ocean);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    color: var(--accent-wave);
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.header-quote {
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    border-left: 4px solid var(--accent-wave);
+    padding-left: 20px;
+    text-align: left;
+}
+
+.header-quote cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: var(--accent-wave);
+}
+
+/* About Section */
+.about-section h2 {
+    color: var(--accent-wave);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.definition-box, .symptoms-box {
+    background: rgba(0, 119, 190, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    border-left: 4px solid var(--accent-wave);
+}
+
+.definition-box h3, .symptoms-box h3 {
+    color: var(--accent-wave);
+    margin-bottom: 10px;
+}
+
+/* Program Section */
+.program-section h2 {
+    color: var(--accent-wave);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.stage-card {
+    background: rgba(0, 119, 190, 0.1);
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.stage-card:hover {
+    transform: translateY(-2px);
+    background: rgba(0, 119, 190, 0.2);
+}
+
+.stage-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: var(--gradient-ocean);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 auto 12px;
+}
+
+.stage-card h4 {
+    color: var(--accent-wave);
+    font-size: 0.9rem;
+}
+
+/* Mission Section */
+.mission-section h2 {
+    color: var(--accent-wave);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.mission-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.mission-box {
+    background: rgba(0, 119, 190, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-wave);
+}
+
+.mission-box h3 {
+    color: var(--accent-wave);
+    margin-bottom: 12px;
+}
+
+/* Causes Section */
+.causes-section h2 {
+    color: var(--accent-wave);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.causes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.cause-card {
+    background: rgba(0, 119, 190, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    transition: all 0.3s ease;
+}
+
+.cause-card:hover {
+    transform: translateY(-2px);
+    background: rgba(0, 119, 190, 0.2);
+}
+
+.cause-card h3 {
+    color: var(--accent-wave);
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+/* Impact Section */
+.impact-section h2 {
+    color: var(--accent-wave);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.impact-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.impact-box {
+    background: rgba(190, 24, 93, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #be185d;
+}
+
+.impact-box h3 {
+    color: #f472b6;
+    margin-bottom: 12px;
+}
+
+/* Contact Section */
+.contact-section {
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: var(--accent-wave);
+    margin-bottom: 16px;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.contact-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-btn.primary {
+    background: var(--gradient-ocean);
+    color: white;
+}
+
+.contact-btn.secondary {
+    background: transparent;
+    color: var(--accent-wave);
+    border: 2px solid var(--accent-wave);
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-ocean);
+}
+
+/* Video Section */
+.video-section h2 {
+    color: var(--accent-wave);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.intro-video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateX(-100px); }
+    50% { transform: translateX(100px); }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.animate-wave {
+    animation: wave 4s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .header-quote {
+        font-size: 1rem;
+        padding-left: 16px;
+    }
+    
+    .stages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .mission-content,
+    .causes-grid,
+    .impact-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-btn {
+        width: 200px;
+    }
+}
