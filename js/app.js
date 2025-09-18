@@ -14,29 +14,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Contact button functionality
-    const contactButtons = document.querySelectorAll('.contact-btn');
-    contactButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            if (this.classList.contains('primary')) {
-                // Book consultation
-                alert('Booking consultation - This would redirect to booking system');
-                // In real implementation: window.location.href = 'booking-page.html';
-            } else {
-                // Learn more - scroll to top or show more info
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+    // Contact button functionality is now handled by onclick attributes in HTML
     
-    // Stage card hover effects
-    const stageCards = document.querySelectorAll('.stage-card');
-    stageCards.forEach(card => {
+    // Enhanced hover effects for cards
+    const cards = document.querySelectorAll('.cause-card, .mission-box, .impact-box, .success-box');
+    cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px) scale(1.02)';
+            this.style.transform = 'translateY(-3px) scale(1.01)';
         });
         
         card.addEventListener('mouseleave', function() {
@@ -88,16 +72,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Logo click to scroll to top
-    const logo = document.querySelector('.logo');
-    if (logo) {
-        logo.addEventListener('click', function() {
+    // Title click to scroll to top
+    const title = document.querySelector('.title');
+    if (title) {
+        title.addEventListener('click', function() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         });
-        logo.style.cursor = 'pointer';
+        title.style.cursor = 'pointer';
     }
     
     // Add loading animation to images
