@@ -37,57 +37,59 @@ body {
 }
 
 /* Hero Section */
+/* Hero Section - Updated to match other sections */
 .hero-section {
     position: relative;
-    background: url('images/pool.jpg') center/cover;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: -20px -20px 40px -20px;
+    background: var(--light-bg);
+    min-height: auto;
+    display: block;
+    margin: 0 0 40px 0;
     overflow: hidden;
+    padding: 40px 20px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-ocean);
 }
 
 .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--gradient-hero);
-    z-index: 1;
+    content: none; /* Remove the gradient overlay */
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
     text-align: center;
-    color: white;
-    max-width: 800px;
-    padding: 20px;
+    color: var(--light-text);
+    max-width: 100%;
+    padding: 0;
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 16px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: none;
+    background: var(--gradient-ocean);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 32px;
-    opacity: 0.95;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+    text-shadow: none;
+    color: var(--secondary-ocean);
 }
 
-.hero-video {
-    max-width: 600px;
+.hero-image {
+    max-width: 800px;
     width: 100%;
     height: auto;
     border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-ocean);
+    margin: 0 auto;
+    display: block;
 }
 
 /* Glass morphism effect */
