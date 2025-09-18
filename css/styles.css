@@ -36,7 +36,6 @@ body {
     padding: 20px;
 }
 
-/* Hero Section */
 /* Hero Section - Updated to match other sections */
 .hero-section {
     position: relative;
@@ -48,10 +47,6 @@ body {
     padding: 40px 20px;
     border-radius: 16px;
     box-shadow: var(--shadow-ocean);
-}
-
-.hero-section::before {
-    content: none; /* Remove the gradient overlay */
 }
 
 .hero-content {
@@ -257,6 +252,31 @@ body {
 }
 
 .impact-box h3 {
+    color: var(--accent-wave);
+    margin-bottom: 12px;
+}
+
+/* Success Section */
+.success-section h2 {
+    color: var(--accent-wave);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.success-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.success-box {
+    background: rgba(0, 119, 190, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent-wave);
+}
+
+.success-box h3 {
     color: var(--accent-wave);
     margin-bottom: 12px;
 }
@@ -499,14 +519,14 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
     .hero-subtitle {
         font-size: 1.2rem;
     }
     
-    .hero-video {
+    .hero-image {
         max-width: 100%;
     }
     
